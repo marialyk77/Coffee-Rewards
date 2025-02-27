@@ -35,7 +35,7 @@ Missing Values Found In: Gender, Income
 )
 ```
 
-- **Income:** It was Whole Number, changes to 'Fixed Decimal Number'.
+- **Income:** Originally, it was Whole Number, I changed it to 'Fixed Decimal Number'.
   
 **B**. **Filtering rows**: 
 
