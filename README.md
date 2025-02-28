@@ -3,25 +3,9 @@
 Ongoing Project!!!
 
 
+## Data Credibility
 
-## Dataset Exploration
-
-### Table: Customers 
-
-This table serves as a Dimension table. 
-
-Number of Rows: 17.000
-
-Number of Columns: 5
-
-####  Data Completness:
-
-Missing Values Found In: Gender, Income 
-
-
-#### Data Credibility
-
-- Reliable:  The current dataset is accurate and complete; however, bias issues cannot be determined. The **age** distribution ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the 'gender' and 'income' columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.**
+- Reliable:  The current dataset is accurate and complete; however, bias issues cannot be determined. The **age** distribution of the customers ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the 'gender' and 'income' columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.**
 
 - Original: The data was downloaded from Maven Analytics but was originally sourced from Kaggle, via Udacity.
 
@@ -31,7 +15,22 @@ Missing Values Found In: Gender, Income
 
 - Cited: The data is not cited, but it is in the public domain.
 
-#### Data Cleaning 
+
+## Data Cleaning 
+
+
+### Table: Customers 
+
+This table serves as a Dimension table. 
+
+Number of Rows: 17.000
+
+Number of Columns: 5
+
+**Data Completness:**
+
+Missing Values Found In: Gender, Income.
+
 
 **A**. **Changing Data Type** in the following collumn: 
 
@@ -49,7 +48,7 @@ Missing Values Found In: Gender, Income
   
 **B**. **Filtering rows**: 
 
-- Age column: Rows with an age of 118 were removed, as they consistently lacked additional information, including gender and income. Filtering out these rows also eliminated all previously null entries in other columns. 
+-**Age column:** Rows with an age of 118 were removed, as they consistently lacked additional information, including gender and income. Filtering out these rows also eliminated all previously null entries in other columns. 
 
 ![image](https://github.com/user-attachments/assets/1fb84450-eb25-4396-81b4-7aecfbe7a250)
 
@@ -65,17 +64,15 @@ Number of Rows: 10
 
 Number of Columns: 6
 
-####  Data Completness:
+**Data Completness:**
 
 No missing values or inconsistencies. 
 
-Duplicates:  The 'offer_type' column contains duplicate values, which is expected since multiple offers can belong to the same type. However, each offer has a unique 'offer_id'.
+**Duplicates:**  The 'offer_type' column contains duplicate values, which is expected since multiple offers can belong to the same type. However, each offer has a unique 'offer_id'.
 
-Channels Column: The values in the 'channels' column are stored as lists, as some offers are available across multiple platforms.
+**Channels Column:** The values in the 'channels' column are stored as lists, as some offers are available across multiple platforms.
 
-#### Data Cleaning 
-
-The table 'offers' needed no cleaning. 
+**The table 'offers' needed no cleaning.**
 
 
 ### Table: Events 
@@ -86,11 +83,11 @@ Number of Rows: 306534
 
 Number of Columns: 5
 
-####  Data Completness:
+**Data Completness:**
 
 No missing values or inconsistencies. 
 
-#### Data Cleaning 
+**Data Cleaning:**
 
 
 - Event column: To optimize performance and ensure consistency, the event column was transformed into a separate dimension table (dim_event). This reduces storage space, improves query efficiency, and replaces repetitive text with an integer key for better performance. As a result, the 'event' column was replaced with event_id.
@@ -112,11 +109,6 @@ To resolve this, I used Python to parse and extract structured data from the 'va
 
 
 After extracting the new columns, the NULL values simply indicate that a particular column is not relevant for that row. Since each event type only populates certain fields, I replaced NULLs with appropriate default values: **0 for 'transaction_amount' and **"No Offer" for 'offer_id'** to explicitly indicate the absence of an offer. For the rewards column, I left the NULL values as they are since not every event results in a reward.  Populating the NULLs with 0 could be misleading, as it would suggest that every offer event has a reward of 0 by default, which is not the case. Some might assume that a 0 reward means the customer failed to earn a reward when in reality, some events (like transactions) aren’t even eligible for rewards.
-
-
-
-
-
 
 
 
