@@ -58,8 +58,6 @@ Number of Rows: 10
 
 Number of Columns: 6
 
-**Data Completness:**
-
 No missing values or inconsistencies. 
 
 **Duplicates:**  The 'offer_type' column contains duplicate values, which is expected since multiple offers can belong to the same type. However, each offer has a unique 'offer_id'.
@@ -137,6 +135,25 @@ in
 
 
 The column 'time' in the Fact table represents the number of hours elapsed since the start of the 30-day period, essentially acting as a timestamp for each event. 
+
+
+## Data Analysis 
+
+I grouped customers based on age and income to analyze patterns more effectively. The age groups were defined within the range 18 to 101, while the income groups were categorized between $30,000 and $120,000. This segmentation allows for better insights into customer behavior, offer engagement, and spending habits across different demographics.
+
+Age Groups:
+- 18-25 (Young Adults)
+- 26-35 (Early Career)
+- 36-50 (Mid-Career)
+- 51-65 (Late Career)
+- 66+ (Retirement Age)
+
+Income Groups:
+- 30K-50K (Low Income)
+- 50K-75K (Middle Income)
+- 75K-100K (Upper Middle Income)
+- 100K-120K (High Income)
+
 
 
 
