@@ -5,7 +5,7 @@ Ongoing Project!!!
 
 ## Data Credibility
 
-- Reliable:  The current dataset is accurate and complete; however, bias issues cannot be determined. The **age** distribution of the customers ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the 'gender' and 'income' columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.**
+- Reliable:  The current dataset is accurate and complete; however, bias issues cannot be determined. The **age** distribution of customers ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the 'gender' and 'income' columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.** I removed only the rows where the age was 118.
 
 - Original: The data was downloaded from Maven Analytics but was originally sourced from Kaggle, via Udacity.
 
@@ -27,12 +27,9 @@ Number of Rows: 17.000
 
 Number of Columns: 5
 
-**Data Completness:**
+**Missing values** were found in the 'Gender' and 'Income' columns, corresponding to entries where the 'Age' is 118.
 
-Missing Values Found In: Gender, Income.
-
-
-**A**. **Changing Data Type** in the following collumn: 
+**Cleaning:**
 
 - Became Member on: This column represents dates but is stored as an **integer** in the format of YYYY-MM-DD. I transformed it before converting it to a  YYYY-MM-DD **date** format. 
 
@@ -44,11 +41,8 @@ Missing Values Found In: Gender, Income.
 )
 ```
 
-- **Income:** Originally, it was Whole Number, I changed it to 'Fixed Decimal Number'.
-  
-**B**. **Filtering rows**: 
 
--**Age column:** Rows with an age of 118 were removed, as they consistently lacked additional information, including gender and income. Filtering out these rows also eliminated all previously null entries in other columns. 
+-**Age:** Rows with an age of 118 were removed. Filtering out these rows also eliminated all null entries in the 'Gender' and 'Income' columns. 
 
 ![image](https://github.com/user-attachments/assets/1fb84450-eb25-4396-81b4-7aecfbe7a250)
 
@@ -58,7 +52,7 @@ Missing Values Found In: Gender, Income.
 
 ### Table: Offers
 
-This table serves as a Dimension table. 
+This table serves as a Dimension table. **It needed no cleaning.**
 
 Number of Rows: 10
 
@@ -72,8 +66,6 @@ No missing values or inconsistencies.
 
 **Channels Column:** The values in the 'channels' column are stored as lists, as some offers are available across multiple platforms.
 
-**The table 'offers' needed no cleaning.**
-
 
 ### Table: Events 
 
@@ -83,12 +75,9 @@ Number of Rows: 306534
 
 Number of Columns: 5
 
-**Data Completness:**
+No missing values or inconsistencies.
 
-No missing values or inconsistencies. 
-
-**Data Cleaning:**
-
+**Cleaning:**
 
 - Event column: To optimize performance and ensure consistency, the event column was transformed into a separate dimension table (dim_event). This reduces storage space, improves query efficiency, and replaces repetitive text with an integer key for better performance. As a result, the 'event' column was replaced with event_id.
 
@@ -99,7 +88,6 @@ No missing values or inconsistencies.
 
 
 ![image](https://github.com/user-attachments/assets/4e2b545a-dc16-4b0b-8783-1fd60c47cd43)
-
 
 
 To resolve this, I used Python to parse and extract structured data from the 'value' column. Using ast.literal_eval(), I converted string representations of dictionaries into actual dictionaries and extracted the relevant fields. The extracted values were then assigned to three new columns: 'transaction_amount', 'offer_id', and 'reward'. Python was chosen for its efficiency in handling complex data structures and automating the transformation process.
