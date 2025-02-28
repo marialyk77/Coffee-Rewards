@@ -92,7 +92,24 @@ No missing values or inconsistencies.
 
 #### Data Cleaning 
 
-- Column Value: Contains nested JSON-like data, e.g., {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}. I removed unnecessary characters, resulting in the final output: 9b98b8c7a33c4b65b9aebfe6a799e6d9, and renamed the column to offer_id. This column will serve as a foreign key to establish a relationship with the corresponding primary key in the 'offers' table.
+- Column Value: Contains  inconsistent data formats in the form of nested JSON-like data, e.g., {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}, {'amount': 0.05}, {'amount': 0.30000000000000004}. Further investigation revealed that this column **is context-dependent**, meaning its contents vary based on the event type. Specifically, It stored **transaction amounts for purchases**, **offer IDs for offer-related events**, and **rewards for completed offers.**. This inconsistency needed to be addressed before establishing relationships with the offers dimention table.
+
+
+![image](https://github.com/user-attachments/assets/e74f4d8f-4d71-4cc5-9258-b46247aefbf3)
+
+
+![image](https://github.com/user-attachments/assets/4e2b545a-dc16-4b0b-8783-1fd60c47cd43)
+
+
+**Handling Mixed Data in the Value Column**
+
+
+I utilized Python to parse and extract structured data from the 'value' column, which contained nested dictionaries with varying keys. Using ast.literal_eval(), I converted the string representations of dictionaries into actual dictionaries and then extracted relevant fields. The extracted values were then assigned to three new columns: 'transaction_amount', 'offer_id', and 'reward'. Python was chosen for its efficiency in handling complex data structures and its ability to automate the transformation process.
+
+
+
+
+
 
 - Event column: To optimize performance and ensure consistency, the event column was transformed into a separate dimension table (dim_event). This reduces storage space, improves query efficiency, and replaces repetitive text with an integer key for better performance. As a result, the 'event' column was replaced with event_id.
 
@@ -127,4 +144,12 @@ let
 in
     #"Filtered Rows"
 ```
+
+## Modeling 
+
+![image](https://github.com/user-attachments/assets/dfc68d6d-c25f-4aa4-9fc8-0866ec3b6b7e)
+
+The column 'time' in the Fact table represents the number of hours elapsed since the start of the 30-day period, essentially acting as a timestamp for each event. 
+
+
 
