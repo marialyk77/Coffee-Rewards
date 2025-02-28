@@ -16,14 +16,10 @@ Number of Columns: 5
 
 Missing Values Found In: Gender, Income 
 
-#### Data Consistency:
-
-- Age column: Ranges from 18 to 118.
-
 
 #### Data Credibility
 
-- Reliable:  The current dataset is accurate and complete; however, bias issues cannot be determined. The age distribution ranges from 18 to 118. Notably, all rows with an age of 118 have null values in the gender and income columns. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, the 90-101 age group has no missing values in other columns, suggesting they may not be typos. However, it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.
+- Reliable:  The current dataset is accurate and complete; however, bias issues cannot be determined. The **age** distribution ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the gender and income columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.**
 
 - Original: The data was downloaded from Maven Analytics but was originally sourced from Kaggle, via Udacity.
 
