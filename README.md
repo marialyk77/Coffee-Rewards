@@ -8,6 +8,8 @@ Ongoing Project!!
 
 ### Table: Customers 
 
+This table serves as a Dimension table. 
+
 Number of Rows: 17.000
 
 Number of Columns: 5
@@ -53,4 +55,76 @@ Missing Values Found In: Gender, Income
 
 
 ![image](https://github.com/user-attachments/assets/f8dcb289-e119-4ef5-850b-8a663c4b3bce)
+
+
+### Table: Offers
+
+This table serves as a Dimension table. 
+
+Number of Rows: 10
+
+Number of Columns: 6
+
+####  Data Completness:
+
+No missing values or inconsistencies. 
+
+Duplicates:  The 'offer_type' column contains duplicate values, which is expected since multiple offers can belong to the same type. However, each offer has a unique 'offer_id'.
+
+Channels Column: The values in the 'channels' column are stored as lists, as some offers are available across multiple platforms.
+
+#### Data Cleaning 
+
+The table 'offers' needed no cleaning. 
+
+
+### Table: Events 
+
+This table serves as the fact table because it contains transactional data (customer interactions with offers). Each row represents an event, such as an offer being received, viewed, or completed.
+
+Number of Rows: 306534
+
+Number of Columns: 5
+
+####  Data Completness:
+
+No missing values or inconsistencies. 
+
+#### Data Cleaning 
+
+- Column Value: Contains nested JSON-like data, e.g., {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}. I removed unnecessary characters, resulting in the final output: 9b98b8c7a33c4b65b9aebfe6a799e6d9, and renamed the column to offer_id. This column will serve as a foreign key to establish a relationship with the corresponding primary key in the 'offers' table.
+
+- Event column: To optimize performance and ensure consistency, the event column was transformed into a separate dimension table (dim_event). This reduces storage space, improves query efficiency, and replaces repetitive text with an integer key for better performance. As a result, the 'event' column was replaced with event_id.
+
+
+### Table: Dates 
+
+To improve performance and enable efficient time-based analysis, a separate Dates Table was created. This allows for better date hierarchies, optimized relationships, and enhanced filtering across the dataset.
+
+```ruby
+let
+    // Get the minimum and maximum date from customers_dim
+    MinDate = List.Min(customers_dim[Date]),
+    MaxDate = List.Max(customers_dim[Date]),
+
+    // Generate a list of dates from MinDate to MaxDate
+    DateList = List.Dates(MinDate, Number.From(MaxDate - MinDate) + 1, #duration(1,0,0,0)),
+
+    // Convert list to a table
+    DateTable = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}),
+
+    // Change type to Date
+    ChangedType = Table.TransformColumnTypes(DateTable, {{"Date", type date}}),
+
+    // Add necessary columns
+    AddYear = Table.AddColumn(ChangedType, "Year", each Date.Year([Date]), Int64.Type),
+    AddMonth = Table.AddColumn(AddYear, "Month", each Date.Month([Date]), Int64.Type),
+    AddMonthName = Table.AddColumn(AddMonth, "Month Name", each Date.ToText([Date], "MMM"), type text),
+    AddWeek = Table.AddColumn(AddMonthName, "Week Number", each Date.WeekOfYear([Date]), Int64.Type),
+    AddDayName = Table.AddColumn(AddWeek, "Day Name", each Date.ToText([Date], "ddd"), type text),
+    AddQuarter = Table.AddColumn(AddDayName, "Quarter", each "Q" & Number.ToText(Date.QuarterOfYear([Date])), type text),
+    #"Filtered Rows" = Table.SelectRows(AddQuarter, each true)
+in
+    #"Filtered Rows"
+```
 
