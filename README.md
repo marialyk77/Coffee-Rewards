@@ -108,7 +108,10 @@ No missing values or inconsistencies.
 To resolve this, I used Python to parse and extract structured data from the 'value' column. Using ast.literal_eval(), I converted string representations of dictionaries into actual dictionaries and extracted the relevant fields. The extracted values were then assigned to three new columns: 'transaction_amount', 'offer_id', and 'reward'. Python was chosen for its efficiency in handling complex data structures and automating the transformation process.
 
 
+![image](https://github.com/user-attachments/assets/802b20c5-e56e-4d74-b76b-b40b993ef2f7)
 
+
+After extracting the new columns, the NULL values simply indicate that a particular column is not relevant for that row. Since each event type only populates certain fields, I replaced NULLs with appropriate default values: **0 for 'transaction_amount' and **"No Offer" for 'offer_id'** to explicitly indicate the absence of an offer. For the rewards column, I left the NULL values as they are since not every event results in a reward.  Populating the NULLs with 0 could be misleading, as it would suggest that every offer event has a reward of 0 by default, which is not the case. Some might assume that a 0 reward means the customer failed to earn a reward when in reality, some events (like transactions) aren’t even eligible for rewards.
 
 
 
@@ -150,7 +153,8 @@ in
 
 ## Modeling 
 
-![image](https://github.com/user-attachments/assets/dfc68d6d-c25f-4aa4-9fc8-0866ec3b6b7e)
+![image](https://github.com/user-attachments/assets/0584ec38-2552-476b-bfbd-45c43bdbf892)
+
 
 The column 'time' in the Fact table represents the number of hours elapsed since the start of the 30-day period, essentially acting as a timestamp for each event. 
 
