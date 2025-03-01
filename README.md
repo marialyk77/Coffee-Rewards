@@ -31,7 +31,7 @@ Number of Columns: 5
 
 **Cleaning:**
 
-- Became Member on: This column represents dates but is stored as an **integer** in the format of YYYY-MM-DD. I transformed it before converting it to a  YYYY-MM-DD **date** format. 
+- **Became Member on:** This column is populated with dates but is stored as an **integer** in the format of YYYY-MM-DD. I transformed it before converting it to a  YYYY-MM-DD **date** format. 
 
 ```ruby
 #date(
@@ -77,10 +77,16 @@ No missing values or inconsistencies.
 
 **Cleaning:**
 
-- Event column: To optimize performance and ensure consistency, the event column was transformed into a separate dimension table (dim_event). This reduces storage space, improves query efficiency, and replaces repetitive text with an integer key for better performance. As a result, the 'event' column was replaced with event_id.
+- **Event column:** To optimize performance and ensure consistency, the event column was transformed into a separate dimension table (event_type). This reduces storage space, improves query efficiency, and replaces repetitive text with an integer key for better performance. As a result, the 'event' column was replaced with event_id.
 
 
-- Column Value: Contains  inconsistent data formats in the form of nested JSON-like data, e.g., {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}, {'amount': 0.05}, {'amount': 0.30000000000000004}. Further investigation revealed that this column **is context-dependent**, meaning its contents vary based on the event type. Specifically, It stored **transaction amounts for purchases**, **offer IDs for offer-related events**, and **rewards for completed offers.** This inconsistency needed to be addressed before establishing relationships with the offers dimention table.
+![image](https://github.com/user-attachments/assets/9f4e2bc5-6ffb-4bf1-b378-05c8f64d6d75)
+
+
+![image](https://github.com/user-attachments/assets/350c14a2-d35d-4880-9e3d-13472de63219)
+
+
+- **Value:** Contains  inconsistent data formats in the form of nested JSON-like data, e.g., {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}, {'amount': 0.05}, {'amount': 0.30000000000000004}. Further investigation revealed that this column **is context-dependent**, meaning its contents vary based on the event type. Specifically, It stored **transaction amounts for purchases**, **offer IDs for offer-related events**, and **rewards for completed offers.** This inconsistency needed to be addressed before establishing relationships with the offers dimention table.
 
 ![image](https://github.com/user-attachments/assets/e74f4d8f-4d71-4cc5-9258-b46247aefbf3)
 
