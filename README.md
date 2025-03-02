@@ -65,7 +65,7 @@ No missing values or inconsistencies.
 **Channels Column:** The values in the 'channels' column are stored as lists, as some offers are available across multiple platforms.
 
 
-### Table: Events 
+### Table: Events_fact
 
 This table serves as the fact table because it contains transactional data (customer interactions with offers). Each row represents an event, such as an offer being received, viewed, or completed.
 
@@ -101,6 +101,10 @@ To resolve this, I used Python to parse and extract structured data from the 'va
 
 
 After extracting the new columns, the NULL values simply indicate that a particular column is not relevant for that row. Since each event type only populates certain fields, I replaced NULLs with appropriate default values: **0 for 'transaction_amount' and **"No Offer" for 'offer_id'** to explicitly indicate the absence of an offer. For the rewards column, I left the NULL values as they are since not every event results in a reward.  Populating the NULLs with 0 could be misleading, as it would suggest that every offer event has a reward of 0 by default, which is not the case. Some might assume that a 0 reward means the customer failed to earn a reward when in reality, some events (like transactions) aren’t even eligible for rewards.
+
+- **offer_id**: The events_fact table contained 172,532 rows where offer_id was marked as "No offer." These rows do not correspond to any offer type in offers_dim.
+
+The presence of "No offer" entries in events_fact[offer_id] likely comes from events that are unrelated to offers—such as general customer interactions or other event types that do not involve a specific offer. I decided to keep these rows **to analyze customer behavior without offers.**
 
 
 
