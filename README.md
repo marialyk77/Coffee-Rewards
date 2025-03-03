@@ -128,19 +128,22 @@ There is a small inconsistency in the **key naming**:
 
 
 
-
-
 I used Python to parse and extract structured data from the 'value' column. Using ast.literal_eval(), I converted string representations of dictionaries into actual dictionaries and extracted the relevant fields. The extracted values were then assigned to three new columns: 'transaction_amount', 'offer_id', and 'reward'. Python was chosen for its efficiency in handling complex data structures and automating the transformation process.
 
 
 ![image](https://github.com/user-attachments/assets/802b20c5-e56e-4d74-b76b-b40b993ef2f7)
 
 
-After extracting the new columns, the NULL values simply indicate that a particular column is not relevant for that row. Since each event type only populates certain fields, I replaced NULLs with appropriate default values: **0 for 'transaction_amount' and **"No Offer" for 'offer_id'** to explicitly indicate the absence of an offer. For the rewards column, I left the NULL values as they are since not every event results in a reward.  Populating the NULLs with 0 could be misleading, as it would suggest that every offer event has a reward of 0 by default, which is not the case. Some might assume that a 0 reward means the customer failed to earn a reward when in reality, some events (like transactions) aren’t even eligible for rewards.
+After extracting the new columns, NULL values appear in certain rows because the corresponding event category does not require those values. For example, if the event is "received order," the reward column will be NULL since rewards are only applicable to "completed orders." Similarly, transaction amounts will be NULL when related to offer_id and reward. 
 
-- **offer_id**: The events_fact table contained 172,532 rows where offer_id was marked as "No offer." These rows do not correspond to any offer type in offers_dim.
+![image](https://github.com/user-attachments/assets/6eaef01d-ad9c-4f24-a024-a2141c9c9a88)
 
-The presence of "No offer" entries in events_fact[offer_id] likely comes from events that are unrelated to offers—such as general customer interactions or other event types that do not involve a specific offer. I decided to keep these rows **to analyze customer behavior without offers.**
+![image](https://github.com/user-attachments/assets/083a046c-f7b9-46d5-9f06-ce5a614521b8)
+
+
+Transaction_amount: Nulls were replaced with 0, as NULL transaction_amount **means no transaction happened**, so replacing it with 0 is fine.
+
+Reward: A NULL reward **doesn't mean the customer received 0 rewards** —it simply indicates that the row isn't eligible for rewards, such as in "offer received" or "offer viewed" events. To avoid confusion, I left it as NULL, even though it's not the best practice. However, given the context, this approach makes the most sense here.
 
 
 
