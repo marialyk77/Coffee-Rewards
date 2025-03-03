@@ -141,10 +141,12 @@ After extracting the new columns, NULL values appear in certain rows because the
 ![image](https://github.com/user-attachments/assets/083a046c-f7b9-46d5-9f06-ce5a614521b8)
 
 
-Transaction_amount: Nulls were replaced with 0, as NULL transaction_amount **means no transaction happened**, so replacing it with 0 is fine.
+**Transaction_amount:** Nulls were replaced with 0, as NULL transaction_amount **means no transaction happened**, so replacing it with 0 is fine.
 
-Reward: A NULL reward **doesn't mean the customer received 0 rewards** —it simply indicates that the row isn't eligible for rewards, such as in "offer received" or "offer viewed" events. To avoid confusion, I left it as NULL, even though it's not the best practice. However, given the context, this approach makes the most sense here.
+**Reward:** A NULL reward **doesn't mean the customer received 0 rewards** —it simply indicates that the row isn't eligible for rewards, such as in "offer received" or "offer viewed" events. To avoid confusion, I left it as NULL, even though it's not the best practice. However, given the context, this approach makes the most sense here.
 
+
+**Offer_id**: Blanks were replaced with 'No offer' as this clearly indicates that the event (like a transaction) is not linked to an offer.
 
 
 ### Table: Dates 
