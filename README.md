@@ -42,7 +42,7 @@ Number of Columns: 5
 ```
 
 
--**Age:** Rows with an age of 118 were removed. Filtering out these rows also eliminated all null entries in the 'Gender' and 'Income' columns. 
+-**Age:**  2.175 rows with an age of 118 were removed. Filtering out these rows also eliminated all null entries in the 'Gender' and 'Income' columns. 
 
 ![image](https://github.com/user-attachments/assets/1fb84450-eb25-4396-81b4-7aecfbe7a250)
 
@@ -149,6 +149,22 @@ After extracting the new columns, NULL values appear in certain rows because the
 
 
 **3. Offer_id**: Blanks were replaced with 'No offer' as this clearly indicates that the event (like a transaction) is not linked to an offer.
+
+
+**Mismatched Customers in events_fact and customers_dim:** Initially, both the events_fact and customers_dim tables had 17,000 unique customers. However, after removing customers aged 118 from customers_dim, this left behind rows in the events_fact table, causing a mismatch. These customers, with age 118, are not valid and cannot be considered reliable. 
+
+To address this, I first created a calculated column to mark valid customers, and then applied a page-level filter in Power BI to remove blanks caused by the mismatch, ensuring accurate data representation.
+
+
+```ruby
+Valid Customer (no 118 Age) = 
+IF(
+    events_fact[customer_id] IN DISTINCT(customers_dim[customer_id]), 
+    "Valid", 
+    "Inavlid Age"
+)
+```
+
 
 
 ### Table: Dates 
