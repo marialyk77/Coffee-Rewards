@@ -204,7 +204,8 @@ in
 
 ## Modeling 
 
-![image](https://github.com/user-attachments/assets/0584ec38-2552-476b-bfbd-45c43bdbf892)
+![image](https://github.com/user-attachments/assets/065aca55-86e1-4ad1-a250-79c7c74f9a3d)
+
 
 
 The column 'time' in the Fact table represents the number of hours elapsed since the start of the 30-day period, essentially acting as a timestamp for each event. 
