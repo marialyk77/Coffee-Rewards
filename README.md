@@ -64,6 +64,10 @@ No missing values or inconsistencies.
 
 **Channels Column:** The values in the 'channels' column are stored as lists, as some offers are available across multiple platforms.
 
+To improve the analysis of offer performance across different marketing channels, I created **a new Channels table**. The original channels column in the offers_dim table stored multiple channels as a list (e.g., ['email', 'mobile', 'social']), which made it difficult to analyze individual channel performance.
+
+To resolve this, I unpivoted the channels column, splitting the list into separate rows, creating a clean table with two columns: offer_id and Channel. I then established a relationship between the new Channels table and the offers_dim table using offer_id.
+
 
 ### Table: Events_fact
 
