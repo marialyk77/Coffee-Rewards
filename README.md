@@ -103,9 +103,9 @@ Python, Power BI
 
 - **Reliable:**  The dataset shows **signs of inaccuracies** and **incompleteness**, with potential bias issues that cannot be fully assessed.
 
-📈 The **age** distribution of customers ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the 'gender' and 'income' columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.** I removed only the rows where the age was 118.
+**1**. The **age** distribution of customers ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the 'gender' and 'income' columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.** I removed only the rows where the age was 118.
 
-🔍 The dataset lacks transaction amount data for BOGO (Buy One Get One) and Discount offer types, which limits the ability to assess the financial success of these offers. As a result:
+**2**. The dataset lacks transaction amount data for BOGO (Buy One Get One) and Discount offer types, which limits the ability to assess the financial success of these offers. As a result:
 
 **1. Inability to Measure Offer Success Based on Revenue:** The lack of transaction data means we cannot evaluate the success of these offers in terms of revenue generation. Only offer engagement metrics are available.
 
