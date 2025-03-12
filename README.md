@@ -107,11 +107,11 @@ The **age** distribution of customers ranges from **18 to 118**. Notably, **all 
 
 The dataset **lacks transaction amount data for BOGO (Buy One Get One) and Discount offer types**, which limits the ability to assess the financial success of these offers. As a result:
 
-  **1. Inability to Measure Offer Success Based on Revenue:** The lack of transaction data means we cannot evaluate the success of these offers in terms of revenue generation. Only offer engagement metrics are available.
+   **1. Inability to Measure Offer Success Based on Revenue:** The lack of transaction data means we cannot evaluate the success of these offers in terms of revenue generation. Only offer engagement metrics are available.
 
-  **2. Limited Insights into Channel Performance:** Since transactional data is missing, we cannot fully assess which channels are most successful in driving revenue.
+   **2. Limited Insights into Channel Performance:** Since transactional data is missing, we cannot fully assess which channels are most successful in driving revenue.
 
-  **3. Focus on Engagement Rather than Financial Impact:** Any performance analysis must focus on engagement metrics such as offer views, completions, and redemption rates, rather than financial success.
+   **3. Focus on Engagement Rather than Financial Impact:** Any performance analysis must focus on engagement metrics such as offer views, completions, and redemption rates, rather than financial success.
 
 - **Original:** The data was downloaded from Maven Analytics but was originally sourced from Kaggle, via Udacity.
 
