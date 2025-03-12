@@ -25,10 +25,30 @@ There are 3 offer types: Bogo, Discount, and Informational.
 
 Goal: To find the offer type that has the highest view rates.
 
+Answer: **BOGO offers have the highest view rate at 81.3%**, meaning that 81.3% of BOGO offers received were viewed. However, **in terms of total views, BOGO accounts for 37.3% of all views.**
+
+- Informational offers have a view rate of 70.4% and contribute to 31.61% of total views.
+- Discount offers have a view rate of 69.2% and account for 31.69% of total views.
+
+**This indicates that while BOGO offers are more likely to be viewed once received, the overall engagement across different offer types is relatively balanced, with Discount and Informational offers collectively making up over 63% of total views.**
+
 
 **2. Among completed offers, Which has a higher completion rate: BOGO or Discount? Are view and completion rates correlated?**
 
 Goal: To analyze offers that were completed, comparing the completion rates between BOGO and Discount offers. Additionally, this analysis explores **whether the offer with the higher completion rate** also has **the highest view rate**. If viewed offers drive higher completion rates, it confirms that direct engagement is more effective for conversion.
+
+
+Answer: 
+
+- Completion Rate Comparison:
+
+The completion rate for **Discount offers (64.5%) is higher than for BOGO offers (57%)**.
+
+- Correlation Between View and Completion Rates:
+  
+There seems to be an **inverse relationship between view and completion rates.** **BOGO** offers get **more views but have a lower completion rate**, while **Discount offers have fewer views** but **a higher completion rate**. This indicates that views and completions are not strongly correlated in this case.
+
+This highlights an interesting disconnect. While **BOGO offers are good at capturing attention**, **Discount offers appear to be more effective at motivating customers to follow through and complete the offer**. It could suggest that the perceived value of the Discount offer is more compelling, despite having fewer views.
 
 **3. How does view rate vary by segements (Age & Income)?**
 
