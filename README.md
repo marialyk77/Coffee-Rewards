@@ -1,6 +1,86 @@
 # Coffee-Rewards
 
-Ongoing Project!!!
+## Project overview 
+
+🌐 The data is scourced from Maven Analytics: https://mavenanalytics.io/challenges/maven-rewards-challenge/404c6060-60eb-400f-9bce-c3b9f97e9d5a
+
+📊 The dataset consists of three CSV files: **Customers**, **Offers**, and **Events**.
+
+
+## Questions 
+
+This report is structured into three pages: the first page focuses on Events & Offer Performance, the second page explores Customer Behavior, and the third page analyzes Transactions.
+
+### Page 1: Events & Offer Performance
+
+This page explores the performance of different offer types and their impact on customer engagement, focusing on the view and completion rates across two segments (Age & Income). The key questions answered are:
+
+**1. Which offer type has the most views?**
+
+There are 3 offer types: Bogo, Discount, and Informational.
+
+Goal: To find the offer type that has the highest view rates.
+
+
+**2. Among completed offers, Which has a higher completion rate: BOGO or Discount? Are view and completion rates correlated?**
+
+Goal: To analyze offers that were completed, comparing the completion rates between BOGO and Discount offers. Additionally, this analysis explores **whether the offer with the higher completion rate** also has **the highest view rate**. If viewed offers drive higher completion rates, it confirms that direct engagement is more effective for conversion.
+
+**3. How does view rate vary by segements (Age & Income)?**
+
+Goal: To explore how these two different segments respond to offers in terms of viewing rates.
+
+**4. How does completion rate vary by segements (Age & Income)?**
+
+Goal: To analyze the completion rates and understand the segment's engagement.
+
+
+### Page 2: Customer Behavior
+
+This page focuses on customer behavior, analyzing patterns such as how customers interact with offers, the completion times, and which channels drive higher completion rates. The questions answered include:
+
+**1. How is the distribution of completion times different across Age and Income level segements?** 
+
+Goal: To analyze how completion times vary across Age and Income level segements. 
+
+**2. Do customers complete offers without viewing them? - By Age group & Income level.**
+
+Goal: To determine if it is possible to complete an order without having seen the offer first. If customers **complete offers without viewing them**, it suggests they were influenced by factors other than direct engagement, **such as prior experience, brand awareness, or social influence.**
+
+**3. Which offer types are completed without being viewed?**
+
+Goal: To provide a high-level view of how BOGO and Discount offer types perform in terms of completion, even when not viewed.
+
+**4. Which channel drives the highest completion rate? By Age group & Income level.**
+
+Goal: To analyze which channels are most effective in driving completions across different age and income groups.
+
+**5. How does completion rate vary with difficulty? - Sized by Reward**
+
+Goal: To investigate how the difficulty of an offer, when sized by the reward, affects its completion rate.
+
+**6. How does YoY growth in new customers vary by segment?**
+
+Goal: To analyze the year-over-year (YoY) growth of new customers and its variation across different customer segments.
+
+
+### Page 3: Transactions
+
+The final page focuses on analyzing transactions across different years, segments, and channels. However, the dataset has limitations related to the lack of transaction data for specific offer types, such as BOGO and Discount. Despite this, the following questions were addressed:
+
+**1. Transactions Trending across the years**
+
+Goal: To analyze the trends in transactions over the years, Quarters, Months, Week number.
+
+**2. Does Sending More Offers Drive Higher Transactions?**
+
+Goal: To investigate the relationship between the number of offers sent and the resulting transaction volume.
+
+**3. Which Income Level drives the Transactions?**
+
+Goal: To analyzing which income levels are driving the highest number of transactions.
+
+
 
 
 ## Data Credibility
@@ -71,7 +151,7 @@ To resolve this, I unpivoted the channels column, splitting the list into separa
 
 ### Table: Events_fact
 
-This table serves as the fact table because it contains transactional data (customer interactions with offers). Each row represents an event, such as an offer being received, viewed, or completed.
+This table serves as the fact table because it contains transactional data (not for BOGO & Discount). Each row represents an event, such as an offer being received, viewed, or completed.
 
 Number of Rows: 306534
 
@@ -169,6 +249,18 @@ IF(
 )
 ```
 
+
+#### Dataset Limitation:
+
+The dataset lacks transaction amount data for BOGO (Buy One Get One) and Discount offer types, which limits the ability to assess the financial success of these offers. As a result:
+
+**1. Inability to Measure Offer Success Based on Revenue:** The lack of transaction data means we cannot evaluate the success of these offers in terms of revenue generation. Only offer engagement metrics are available.
+**2. Limited Insights into Channel Performance:** Since transactional data is missing, we cannot fully assess which channels are most successful in driving revenue.
+**3. Focus on Engagement Rather than Financial Impact:** Any performance analysis must focus on engagement metrics such as offer views, completions, and redemption rates, rather than financial success.
+
+**Conclusion:**
+
+The absence of transaction amounts in the dataset limits the ability to evaluate the true financial effectiveness of these offers. Therefore, the analysis was reframed to focus on customer engagement metrics rather than direct revenue impacts.
 
 
 ### Table: Dates 
