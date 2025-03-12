@@ -94,7 +94,9 @@ Goal: To investigate the relationship between the number of offers sent and the 
 Goal: To analyzing which customer segment are driving the highest number of transactions.
 
 
+## Tools Used 
 
+Python, Power BI
 
 
 ## Data Credibility
