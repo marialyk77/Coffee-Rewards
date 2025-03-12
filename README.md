@@ -13,6 +13,10 @@ This report is structured into three pages: the first page focuses on Events & O
 
 ### Page 1: Events & Offer Performance
 
+
+![image](https://github.com/user-attachments/assets/77787683-a2af-4153-a370-efda72192595)
+
+
 This page explores the performance of different offer types and their impact on customer engagement, focusing on the view and completion rates across two segments (Age & Income). The key questions answered are:
 
 **1. Which offer type has the most views?**
@@ -36,6 +40,10 @@ Goal: To analyze the completion rates and understand the segment's engagement.
 
 
 ### Page 2: Customer Behavior
+
+
+![image](https://github.com/user-attachments/assets/0106ed32-b037-43d8-a937-312a67b6cdd1)
+
 
 This page focuses on customer behavior, analyzing patterns such as how customers interact with offers, the completion times, and which channels drive higher completion rates. The questions answered include:
 
@@ -66,6 +74,11 @@ Goal: To analyze the year-over-year (YoY) growth of new customers and its variat
 
 ### Page 3: Transactions
 
+
+![image](https://github.com/user-attachments/assets/efb5b192-1af0-421f-b574-99aa85a267bb)
+
+
+
 The final page focuses on analyzing transactions across different years, segments, and channels. However, the dataset has limitations related to the lack of transaction data for specific offer types, such as BOGO and Discount. Despite this, the following questions were addressed:
 
 **1. Transactions Trending across the years**
@@ -76,9 +89,10 @@ Goal: To analyze the trends in transactions over the years, Quarters, Months, We
 
 Goal: To investigate the relationship between the number of offers sent and the resulting transaction volume.
 
-**3. Which Income Level drives the Transactions?**
+**3. Which segment drives the Transactions?**
 
-Goal: To analyzing which income levels are driving the highest number of transactions.
+Goal: To analyzing which customer segment are driving the highest number of transactions.
+
 
 
 
