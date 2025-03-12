@@ -101,15 +101,27 @@ Python, Power BI
 
 ## Data Credibility
 
-- Reliable:  The dataset is accurate **but not entirely complete**, and potential bias issues cannot be fully assessed. The **age** distribution of customers ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the 'gender' and 'income' columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.** I removed only the rows where the age was 118.
+- **Reliable:**  The dataset shows **signs of inaccuracies** and **incompleteness**, with potential bias issues that cannot be fully assessed.
 
-- Original: The data was downloaded from Maven Analytics but was originally sourced from Kaggle, via Udacity.
+📈 The **age** distribution of customers ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the 'gender' and 'income' columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.** I removed only the rows where the age was 118.
 
-- Comprehensive: Contains all essential information needed to answer key questions.
+🔍 The dataset lacks transaction amount data for BOGO (Buy One Get One) and Discount offer types, which limits the ability to assess the financial success of these offers. As a result:
 
-- Current: Not up to date — there is no information regarding the date of data collection. However, this dataset contains fictional data, which was intended to represent data collected in the 30 days prior to the start of the analysis.
+**1. Inability to Measure Offer Success Based on Revenue:** The lack of transaction data means we cannot evaluate the success of these offers in terms of revenue generation. Only offer engagement metrics are available.
+**2. Limited Insights into Channel Performance:** Since transactional data is missing, we cannot fully assess which channels are most successful in driving revenue.
+**3. Focus on Engagement Rather than Financial Impact:** Any performance analysis must focus on engagement metrics such as offer views, completions, and redemption rates, rather than financial success.
 
-- Cited: The data is not cited, but it is in the public domain.
+Conclusion:
+
+The absence of transaction amounts in the dataset limits the ability to evaluate the true financial effectiveness of these offers. Therefore, the analysis was reframed to focus on customer engagement metrics rather than direct revenue impacts.
+
+- **Original:** The data was downloaded from Maven Analytics but was originally sourced from Kaggle, via Udacity.
+
+- **Comprehensive:** Contains all essential information needed to answer key questions.
+
+- **Current:** Not up to date — there is no information regarding the date of data collection. However, this dataset contains fictional data, which was intended to represent data collected in the 30 days prior to the start of the analysis.
+
+- **Cited:** The data is not cited, but it is in the public domain.
 
 
 ## Data Cleaning 
@@ -264,19 +276,6 @@ IF(
     "Inavlid Age"
 )
 ```
-
-
-#### Dataset Limitation:
-
-The dataset lacks transaction amount data for BOGO (Buy One Get One) and Discount offer types, which limits the ability to assess the financial success of these offers. As a result:
-
-**1. Inability to Measure Offer Success Based on Revenue:** The lack of transaction data means we cannot evaluate the success of these offers in terms of revenue generation. Only offer engagement metrics are available.
-**2. Limited Insights into Channel Performance:** Since transactional data is missing, we cannot fully assess which channels are most successful in driving revenue.
-**3. Focus on Engagement Rather than Financial Impact:** Any performance analysis must focus on engagement metrics such as offer views, completions, and redemption rates, rather than financial success.
-
-**Conclusion:**
-
-The absence of transaction amounts in the dataset limits the ability to evaluate the true financial effectiveness of these offers. Therefore, the analysis was reframed to focus on customer engagement metrics rather than direct revenue impacts.
 
 
 ### Table: Dates 
