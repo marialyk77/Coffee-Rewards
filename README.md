@@ -113,10 +113,6 @@ The dataset **lacks transaction amount data for BOGO (Buy One Get One) and Disco
 
   **3. Focus on Engagement Rather than Financial Impact:** Any performance analysis must focus on engagement metrics such as offer views, completions, and redemption rates, rather than financial success.
 
-Conclusion:
-
-The absence of transaction amounts in the dataset limits the ability to evaluate the true financial effectiveness of these offers. Therefore, the analysis was reframed to focus on customer engagement metrics rather than direct revenue impacts.
-
 - **Original:** The data was downloaded from Maven Analytics but was originally sourced from Kaggle, via Udacity.
 
 - **Comprehensive:** Contains all essential information needed to answer key questions.
