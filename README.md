@@ -1,4 +1,4 @@
-# Coffee-Rewards
+#  Brewing Insights: Coffee Customer and Offer Performance Analysis
 
 ## Project overview 
 
