@@ -33,10 +33,9 @@ Answer: **BOGO offers have the highest view rate at 81.3%**, meaning that 81.3% 
 **This indicates that while BOGO offers are more likely to be viewed once received, the overall engagement across different offer types is relatively balanced, with Discount and Informational offers collectively making up over 63% of total views.**
 
 
-**2. Among completed offers, Which has a higher completion rate: BOGO or Discount? Are view and completion rates correlated?**
+**2. Do views translate into completions?**
 
-Goal: To analyze offers that were completed, comparing the completion rates between BOGO and Discount offers. Additionally, this analysis explores **whether the offer with the higher completion rate** also has **the highest view rate**. If viewed offers drive higher completion rates, it confirms that direct engagement is more effective for conversion.
-
+Goal: To analyze offers that were completed, comparing the completion rates between BOGO and Discount offers. Additionally, this analysis explores **whether the offer with the higher completion rate** also has **the highest view rate**. 
 
 Answer: 
 
@@ -49,6 +48,10 @@ The completion rate for **Discount offers (64.5%) is higher than for BOGO offers
 There seems to be an **inverse relationship between view and completion rates.** **BOGO** offers get **more views but have a lower completion rate**, while **Discount offers have fewer views** but **a higher completion rate**. This indicates that views and completions are not strongly correlated in this case.
 
 This highlights an interesting disconnect. While **BOGO offers are good at capturing attention**, **Discount offers appear to be more effective at motivating customers to follow through and complete the offer**. It could suggest that the perceived value of the Discount offer is more compelling, despite having fewer views.
+
+##### Interaction Insight: Comparison of View and Completion Rates.
+
+BOGO offers excel in attracting attention and views but Discount offers are more successful in driving completions. 
 
 **3. How does view rate vary by segements (Age & Income)?**
 
