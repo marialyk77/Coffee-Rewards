@@ -54,6 +54,19 @@ This highlights an interesting disconnect. While **BOGO offers are good at captu
 
 Goal: To explore how these two different segments respond to offers in terms of viewing rates.
 
+Answer: 
+
+- Higher-income customers are more engaged with the offers, as Upper-Middle and High income levels tend to have the highest view rates (77.7% and 79.9%).
+
+- Middle-aged customers (Mid Career and Late Career) have the highest view rates (78.0% and 75.5%).
+
+
+##### Interaction Insight:  How does view rate vary by segements (Age & Income)?
+
+The alignment between higher view rates in both higher-income and middle-aged segments suggests that financial stability and life stage might drive greater interest and responsiveness to offers.
+
+Higher-income customers might have more purchasing power, while middle-aged customers could have greater financial security and motivation to engage with offers, reinforcing the idea that income and age are closely linked in shaping customer engagement patterns.
+
 **4. How does completion rate vary by segements (Age & Income)?**
 
 Goal: To analyze the completion rates and understand the segment's engagement.
