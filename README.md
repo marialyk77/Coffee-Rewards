@@ -61,8 +61,13 @@ BOGO offers excel in attracting attention and views but Discount offers are more
 Goal: To explore how these two different segments respond to offers in terms of viewing rates.
 
 Answer: 
-  
+
+ •	**By Income:**
+ 
 - **Upper-Middle and Middle income levels** tend to have the highest view rates (77.7% and 79.9%), while High income ranks last with 62.2%.
+
+•	**By Age:**
+
 - **Middle-aged customers (Mid Career and Late Career)** have the highest view rates (78.0% and 75.5%).
 
 
@@ -80,7 +85,12 @@ While middle-income customers have the highest view rates, higher-income custome
 
 Goal: To analyze the completion rates and understand the segment's engagement.
 
+•	**By Income:**
+
 - Completion rates increase with income level, peaking at 77.6% for high-income customers. This suggests that higher-income customers are more likely to follow through on offers, possibly due to greater purchasing power.
+
+•	**By Age:**
+
 - The age group with the highest completion rates is Retirement Age (64.8%), followed closely by Late Career (64.7%). This may reflect that retirement-age customers have more free time and established consumption habits, which could drive higher completion rates. Additionally, their higher completion rates may reflect increased brand loyalty or a greater focus on value, even if they are not necessarily high-income.
 
 ***
@@ -113,14 +123,27 @@ In terms of age, the highest completion rates are observed among retirement-age 
 ### Page 2: Customer Behavior
 
 
-![image](https://github.com/user-attachments/assets/0106ed32-b037-43d8-a937-312a67b6cdd1)
-
+![image](https://github.com/user-attachments/assets/af0e916f-62de-4d27-a13e-b58649080b56)
 
 This page focuses on customer behavior, analyzing patterns such as how customers interact with offers, the completion times, and which channels drive higher completion rates. The questions answered include:
 
 **1. How is the distribution of completion times different across Age and Income level segements?** 
 
 Goal: To analyze how completion times vary across Age and Income level segements. 
+
+Answer:
+
+•	**By Age:**
+
+- The median completion times increase slightly with age, suggesting that **older individuals tend to take longer to complete offers.**
+- The **IQR is wider during the Early Career**, indicating **greater variability** in completion times for people in this group. This suggests that younger adults in the early stages of their careers might have more unpredictable behavior when engaging with offers — possibly due to varying levels of financial stability, decision-making confidence, or external distractions.
+- The range of completion times (whiskers) remains relatively consistent across age groups, but the variability narrows slightly in the Late Career and Retirement Age groups.
+
+•	**By Income:**
+
+- The median completion times are fairly consistent across income groups, except for the high-income group, which has a noticeably lower median (around 237 hours vs. 320 hours for others).
+- This suggests that **higher-income individuals tend to complete tasks faster compared to other groups.**
+- The interquartile range (IQR) and whiskers are similar across all income levels, indicating that the overall variability in completion times is consistent regardless of income.
 
 **2. Do customers complete offers without viewing them? - By Age group & Income level.**
 
@@ -155,6 +178,7 @@ The final page focuses on analyzing transactions across different years, segment
 **1. Transactions Trending across the years**
 
 Goal: To analyze the trends in transactions over the years, Quarters, Months, Week number.
+
 
 **2. Does Sending More Offers Drive Higher Transactions?**
 
