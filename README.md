@@ -49,30 +49,65 @@ There seems to be an **inverse relationship between view and completion rates.**
 
 This highlights an interesting disconnect. While **BOGO offers are good at capturing attention**, **Discount offers appear to be more effective at motivating customers to follow through and complete the offer**. It could suggest that the perceived value of the Discount offer is more compelling, despite having fewer views.
 
+***
 ##### Interaction Insight: Comparison of View and Completion Rates.
 
 BOGO offers excel in attracting attention and views but Discount offers are more successful in driving completions. 
+***
 
-**3. How does view rate vary by segements (Age & Income)?**
+
+**3. How does VIEW rate vary by segements (Income & Age)?**
 
 Goal: To explore how these two different segments respond to offers in terms of viewing rates.
 
 Answer: 
+  
+- **Upper-Middle and Middle income levels** tend to have the highest view rates (77.7% and 79.9%), while High income ranks last with 62.2%.
+- **Middle-aged customers (Mid Career and Late Career)** have the highest view rates (78.0% and 75.5%).
 
-- Higher-income customers are more engaged with the offers, as Upper-Middle and High income levels tend to have the highest view rates (77.7% and 79.9%).
-
-- Middle-aged customers (Mid Career and Late Career) have the highest view rates (78.0% and 75.5%).
 
 
-##### Interaction Insight:  How does view rate vary by segements (Age & Income)?
+***
+##### Interaction Insight:  How does VIEW rate vary by segements (Income & Age)?
 
-The alignment between higher view rates in both higher-income and middle-aged segments suggests that financial stability and life stage might drive greater interest and responsiveness to offers.
+The alignment between higher view rates in **middle-income and middle-aged segments** suggests that life stage might drive greater interest and responsiveness to offers.
 
-Higher-income customers might have more purchasing power, while middle-aged customers could have greater financial security and motivation to engage with offers, reinforcing the idea that income and age are closely linked in shaping customer engagement patterns.
+While middle-income customers have the highest view rates, higher-income customers show less engagement (62.2%), indicating that greater purchasing power does not necessarily translate to higher interest in offers. This suggests that life stage rather than income may be a stronger factor influencing customer engagement patterns.
+***
 
-**4. How does completion rate vary by segements (Age & Income)?**
+
+**4. How does COMPLETION rate vary by segements (Income & Age)?**
 
 Goal: To analyze the completion rates and understand the segment's engagement.
+
+- Completion rates increase with income level, peaking at 77.6% for high-income customers. This suggests that higher-income customers are more likely to follow through on offers, possibly due to greater purchasing power.
+- The age group with the highest completion rates is Retirement Age (64.8%), followed closely by Late Career (64.7%). This may reflect that retirement-age customers have more free time and established consumption habits, which could drive higher completion rates. Additionally, their higher completion rates may reflect increased brand loyalty or a greater focus on value, even if they are not necessarily high-income.
+
+***
+
+##### Interaction Insight:  How does COMPLETION rate vary by segements (Income & Age)?
+
+The **highest completion** rates are seen in **high-income customers** (77.6%), indicating that greater purchasing power may increase the likelihood of following through on offers once engaged. **This suggests that while higher-income customers may show lower initial interest (in terms of viewing), they are more decisive when they do engage.**
+
+In terms of age, the highest completion rates are observed among retirement-age customers (64.8%), followed closely by late-career customers (64.7%). This may reflect greater brand loyalty, established habits, or a preference for value among older customers.
+
+***
+
+
+***
+
+##### Overall Segment Insight (View vs. Completion):
+
+**Middle-income and middle-aged** customers have the **highest view rates**, suggesting that life stage and financial stability drive initial engagement with offers.
+
+**High-income and retirement-age** customers, however, **have the highest completion rates**, suggesting that while they may engage less frequently, they are more likely to convert when they do engage.
+
+**This indicates that life stage influences initial interest (viewing), but financial power and loyalty are stronger drivers of conversion (completion).**
+***
+
+
+
+
 
 
 ### Page 2: Customer Behavior
