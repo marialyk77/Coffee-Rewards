@@ -106,7 +106,7 @@ In terms of age, the highest completion rates are observed among retirement-age 
 
 ***
 
-##### Overall Segment Insight (View vs. Completion):
+#### Overall Segment Insight (View vs. Completion):
 
 **Middle-income and middle-aged** customers have the **highest view rates**, suggesting that life stage and financial stability drive initial engagement with offers.
 
@@ -149,13 +149,78 @@ Answer:
 
 Goal: To determine if it is possible to complete an order without having seen the offer first. If customers **complete offers without viewing them**, it suggests they were influenced by factors other than direct engagement, **such as prior experience, brand awareness, or social influence.**
 
+Answer:
+
+•	**By Age:**
+
+- Completion without viewing is **lowest among Mid Career customers (13.0%)** — this suggests that this segment is more deliberate and prefers to evaluate offers before completing them.
+
+- Younger segments (Young Adults at 13.8% and Early Career at 14.2%) also show relatively low completion without viewing, indicating that they tend to rely on the offer details before making a decision.
+
+- **Older segments** (Late Career at 18.2% and Retirement at 18.1%) **have the highest completion rates without viewing** — this may reflect greater trust, familiarity with the brand, or reliance on prior experience rather than the specifics of the offer.
+
+
+•	**By Income:**
+
+- **Low-income customers are least likely to complete offers without viewing them (12.7%)**, suggesting that they are more cautious and prefer to assess the offer details before acting.
+
+- Middle-income customers complete offers without viewing at a moderate rate (14.4%), reflecting a balanced approach between caution and confidence.
+
+- **High-income customers are most likely to complete offers without viewing them (28.2%)**, which may indicate higher trust, confidence, or less sensitivity to the offer details due to greater financial flexibility.
+
+
+##### Interaction Insight: Do customers complete offers without viewing them? - By Age group & Income level.
+
+Across both age and income segments, **most customers still complete offers after viewing them** — reinforcing the **importance of the offer’s content and presentation in driving conversions**. **However, the tendency to complete without viewing is more pronounced among older and higher-income customers, likely due to greater brand familiarity and financial confidence.**
+
+
+
 **3. Which offer types are completed without being viewed?**
 
 Goal: To provide a high-level view of how BOGO and Discount offer types perform in terms of completion, even when not viewed.
 
+Answer: 
+
+- BOGO offers are more frequently completed without being viewed (46.6%) compared to Discount offers (39.5%).
+This suggests that BOGO deals may have a stronger psychological appeal or higher perceived value, encouraging completion even when customers have not directly engaged with the offer.
+
+- However, the difference between Bogo completed offers that were viewed and not viewed is relatively small, as the completion rate for viewed BOGO offers stands at 54.9%, compared to 46.6% for those not viewed. This indicates **that customers might already perceive BOGO deals as attractive or beneficial, making them more likely to act on them even without actively reviewing the details**. In contrast, customers **are significantly more likely to complete discount offers if they have seen the details.**
+
+
+ 
 **4. Which channel drives the highest completion rate? By Age group & Income level.**
 
 Goal: To analyze which channels are most effective in driving completions across different age and income groups.
+
+Answer:
+
+By Age Group:
+
+- **Late Career and Retirement Age segments show the highest completion rates across most channels**, suggesting that older customers are more responsive to offers presented through various touchpoints.
+- **Web stands out as the most effective channel for both Late Career (57.3%) and Retirement Age (57.2%)**, indicating that older customers may prefer the ease and accessibility of online platforms.
+- For **mobile, completion rates are surprisingly higher among Late Career (51.4%) and Retirement Age (51.2%) customers compared to Young Adults (37.6%) and Early Career (41.1%)**. This challenges the typical expectation that younger customers would engage more with mobile platforms, suggesting a potential sampling issue or that older customers are more motivated to complete offers once they engage via mobile.
+- **Email also shows higher completion rates among Retirement Age (56.2%) and Late Career (51.8%) customers**, while younger segments like Young Adults (37.5%) and Early Career (40.2%) have lower engagement. This suggests that older customers may be more inclined to complete offers received via email, potentially due to higher trust or familiarity with this channel.
+- For **younger segments** (Young Adults and Early Career), **social media performs relatively well** (40.6% and 45.1%, respectively), though **it's notable that completion rates are even higher for Late Career (55.6%) and Retirement Age (55.5%)**. This raises questions about whether older customers are becoming more active on social media or if the sample reflects an unusual pattern.
+
+•	**By Income:**
+
+By Income Level:
+
+- **Completion rates increase with income level across all channels**, with high-income customers showing the highest rates across the board.
+- **Web emerges as the most effective channel for all income levels**, with completion rates **peaking at 68.6% for high-income customers** and 41.3% for low-income customers. This suggests that customers across different financial backgrounds find online platforms accessible and easy to use.
+- **Social media also shows a strong performance among higher-income groups**, with completion rates rising from 40.1% for low-income customers to 66.9% for high-income customers, indicating that higher-income customers might be more engaged with brands through social platforms.
+- **Email completion rates are lowest among low-income customers (36.2%) but increase steadily with income**, reaching 62.4% for high-income customers. This suggests that higher-income customers might be more receptive to direct communication via email.
+- **Mobile performs well across all income segments, but completion rates are highest among high-income customers (61.0%)**, indicating that mobile platforms provide a convenient and effective channel for engaging higher-income customers.
+
+
+**Points to Investigate:**
+
+- **Sampling Bias:** The unusually high completion rates among older customers on mobile and social media suggest that there may be a sampling imbalance — it’s possible that the dataset includes a disproportionate number of older, digitally proficient customers. Checking the proportion of younger vs. older customers can clarify this pattern.
+
+-  **Platform-Specific Behavior:** The higher social media completion rates among older customers could indicate that the offers were promoted on platforms more popular among older demographics (e.g., Facebook vs. Snapchat). Understanding where the offers were promoted might explain the skewed engagement pattern.
+
+
+
 
 **5. How does completion rate vary with difficulty? - Sized by Reward**
 
