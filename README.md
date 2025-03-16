@@ -168,11 +168,11 @@ Answer:
 
 - **High-income customers are most likely to complete offers without viewing them (28.2%)**, which may indicate higher trust, confidence, or less sensitivity to the offer details due to greater financial flexibility.
 
-
+***
 ##### Interaction Insight: Do customers complete offers without viewing them? - By Age group & Income level.
 
 Across both age and income segments, **most customers still complete offers after viewing them** — reinforcing the **importance of the offer’s content and presentation in driving conversions**. **However, the tendency to complete without viewing is more pronounced among older and higher-income customers, likely due to greater brand familiarity and financial confidence.**
-
+***
 
 
 **3. Which offer types are completed without being viewed?**
@@ -194,7 +194,7 @@ Goal: To analyze which channels are most effective in driving completions across
 
 Answer:
 
-By Age Group:
+**By Age Group:**
 
 - **Late Career and Retirement Age segments show the highest completion rates across most channels**, suggesting that older customers are more responsive to offers presented through various touchpoints.
 - **Web stands out as the most effective channel for both Late Career (57.3%) and Retirement Age (57.2%)**, indicating that older customers may prefer the ease and accessibility of online platforms.
@@ -215,20 +215,93 @@ By Income Level:
 
 **Points to Investigate:**
 
-- **Sampling Bias:** The unusually high completion rates among older customers on mobile and social media suggest that there may be a sampling imbalance — it’s possible that the dataset includes a disproportionate number of older, digitally proficient customers. Checking the proportion of younger vs. older customers can clarify this pattern.
+- **Sampling Bias:** The unusually high completion rates among older customers on mobile and social media suggest that there may be a sampling imbalance — it’s possible that the dataset includes a disproportionate number of older, digitally proficient customers. **This prompts me to check the proportion of younger vs. older customers to clarify this pattern.**
 
 -  **Platform-Specific Behavior:** The higher social media completion rates among older customers could indicate that the offers were promoted on platforms more popular among older demographics (e.g., Facebook vs. Snapchat). Understanding where the offers were promoted might explain the skewed engagement pattern.
 
 
+##### Checking for sampling bias over older people 
 
+
+![image](https://github.com/user-attachments/assets/8e8caab4-4896-4d3a-87eb-4c6fe834bf82)
+
+
+
+**Age Sample Distribution:**
+
+- Young Adults: 6.8%
+- Early Career: 9.2%
+- Mid Career: 22.4%
+- Late Career: 34.7%
+- Retirement: 26.9%
+
+This distribution shows that **younger segments (Young Adults + Early Career) make up only 16% of the sample**, **while older segments (Late Career + Retirement) account for over 60%**. This suggests a potential **sampling bias, as the dataset might overrepresent older customers compared to the general population.**
+
+***
+
+##### Interaction Insight: Which channel drives the highest completion rate? By Age group & Income level.
+
+
+Older customers (Late Career and Retirement Age) show surprisingly higher completion rates across most channels. This prompted me to investigate whether there is a potential sampling bias towards older individuals. The results indicated an overrepresentation of Late Career and Retirement Age groups.
+
+***
 
 **5. How does completion rate vary with difficulty? - Sized by Reward**
 
 Goal: To investigate how the difficulty of an offer, when sized by the reward, affects its completion rate.
 
+Answer:
+
+**Completion rates decrease as difficulty increases** — offers with higher perceived effort tend to discourage completion. 
+
+- **BOGO** offers tend to have **lower completion rates** at higher difficulty levels. The largest reward size appears at difficulty level 10 (reward value = 10), yet the completion rate is only around 60%. This suggests that **even when the reward is substantial, the increased difficulty may discourage customers from completing the offer**.
+
+- **Discount** offers maintain higher completion rates even at higher difficulty levels. *+At difficulty level 20**, the **reward size increases** (reward value = 5), but the **completion rate drops** significantly (below 60%). This shows that beyond a certain difficulty threshold, the reward may not be enough to motivate customers, indicating that high difficulty levels deter completions even if the reward size increases.
+
+
 **6. How does YoY growth in new customers vary by segment?**
 
 Goal: To analyze the year-over-year (YoY) growth of new customers and its variation across different customer segments.
+
+
+•	**By Income:**
+
+- 2013 to 2014:
+•	Largest Decline: Low income → -78.52%
+•	Highest Growth: Upper-Middle income → +149.57%
+- 2014 to 2015:
+•	Largest Decline: Upper-Middle income → -189.66%
+•	Highest Growth: High income → +190.82%
+- 2015 to 2016:
+•	Largest Decline: High income → -154.55%
+•	Highest Growth: Low income → +92.69%
+
+
+**By Age Group:**
+
+- 2013 to 2014:
+•	Largest Decline: Young Adults → -130.11%
+•	Highest Growth: Retirement Age → +117.25%
+- 2014 to 2015:
+•	Largest Decline: Retirement Age → -108.91%
+•	Note: All other age groups also declined during this period.
+- 2015 to 2016:
+•	Largest Decline: Late Career → -45.48%
+•	Highest Growth: Young Adults → +133.33%
+
+
+
+***
+
+##### Interaction Insight: How does YoY growth in new customers vary by segment?
+
+- **High-income segments** are volatile, showing large swings between growth and decline, indicating they are sensitive to external factors.
+- **Retirement and Upper-Middle income segments** show the strongest initial growth but tend to experience steeper declines later, suggesting retention challenges.
+- **Young Adults and Low-income groups** are more inconsistent but capable of strong recoveries, suggesting that targeted strategies might work to stabilize their engagement.
+- **Middle income and Mid Career segments** show more consistent patterns in their growth or decline, compared to the more volatile behavior seen in other income and age groups.
+***
+
+
 
 
 ### Page 3: Transactions
