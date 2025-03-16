@@ -383,12 +383,11 @@ However, it's important to note that age representation is biased since older se
 This suggests that the higher transaction share among older groups could be influenced by the sample's age imbalance.
 
 
------------------------------------------------------------------------------------------------
 
-
+**4. Breakdown of transactions by segment**. 
 
 - **Mid Career** ($366,954) and **Late Career** ($654,016) **age groups** contribute the most to overall transactions, with Middle and Upper-Middle income levels driving most of this activity.
-- **The High income level** shows lower overall transaction volumes, suggesting that higher-income customers may engage less frequently in transactions or that fewer customers fall into this category.
+- The **High income** level shows lower overall transaction volumes, suggesting that higher-income customers may engage less frequently or that fewer customers fall into this category. However, **high-income customers have the highest completion rates (77.6%), indicating that when they do engage, they are more likely to follow through.**
 - **Young Adults and Early Career individuals** are only represented in the Low and Middle income brackets, reflecting their earlier career stage and lower earning capacity.
 
 
