@@ -25,7 +25,7 @@
 - Middle-income and Late Career segments drive the highest transaction volumes, reflecting their stronger engagement and purchasing behavior.
 - An optimal range of 16-30 offers is associated with higher transactions, suggesting diminishing returns from sending too few or too many offers.
 
-Overall, life stage, financial power, and offer type significantly impact customer engagement, with older customers showing higher completion rates and middle-income groups displaying strong initial interest. However, the age distribution imbalance in the dataset must be considered when analyzing customer behavior and growth trends.
+Overall, **life stage**, **financial power**, and **offer type** significantly impact customer engagement, with older customers showing higher completion rates and middle-income groups displaying strong initial interest. However, the age distribution imbalance in the dataset must be considered when analyzing customer behavior and growth trends.
 
 
 ## Questions 
