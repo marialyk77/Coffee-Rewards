@@ -145,6 +145,12 @@ Answer:
 - This suggests that **higher-income individuals tend to complete tasks faster compared to other groups.**
 - The interquartile range (IQR) and whiskers are similar across all income levels, indicating that the overall variability in completion times is consistent regardless of income.
 
+
+##### Interaction Insight: How is the distribution of completion times different across Age and Income level segements?
+
+This analysis highlights the impact of age and income on completion behavior, with younger adults showing more variability and higher-income groups completing tasks faster.
+
+
 **2. Do customers complete offers without viewing them? - By Age group & Income level.**
 
 Goal: To determine if it is possible to complete an order without having seen the offer first. If customers **complete offers without viewing them**, it suggests they were influenced by factors other than direct engagement, **such as prior experience, brand awareness, or social influence.**
@@ -187,6 +193,11 @@ This suggests that BOGO deals may have a stronger psychological appeal or higher
 - However, the difference between Bogo completed offers that were viewed and not viewed is relatively small, as the completion rate for viewed BOGO offers stands at 54.9%, compared to 46.6% for those not viewed. This indicates **that customers might already perceive BOGO deals as attractive or beneficial, making them more likely to act on them even without actively reviewing the details**. In contrast, customers **are significantly more likely to complete discount offers if they have seen the details.**
 
 
+
+##### Interaction Insight 
+
+While BOGO offers stand out for having the highest view rate and completing even without review, Discount and Informational offers collectively make up over 63% of total views, indicating a more balanced overall engagement across offer types. 
+
  
 **4. Which channel drives the highest completion rate? By Age group & Income level.**
 
@@ -220,7 +231,7 @@ By Income Level:
 -  **Platform-Specific Behavior:** The higher social media completion rates among older customers could indicate that the offers were promoted on platforms more popular among older demographics (e.g., Facebook vs. Snapchat). Understanding where the offers were promoted might explain the skewed engagement pattern.
 
 
-##### Checking for sampling bias over older people 
+**Checking for sampling bias over older people** 
 
 
 ![image](https://github.com/user-attachments/assets/8e8caab4-4896-4d3a-87eb-4c6fe834bf82)
@@ -257,6 +268,11 @@ Answer:
 - **BOGO** offers tend to have **lower completion rates** at higher difficulty levels. The largest reward size appears at difficulty level 10 (reward value = 10), yet the completion rate is only around 60%. This suggests that **even when the reward is substantial, the increased difficulty may discourage customers from completing the offer**.
 
 - **Discount** offers maintain higher completion rates even at higher difficulty levels. *+At difficulty level 20**, the **reward size increases** (reward value = 5), but the **completion rate drops** significantly (below 60%). This shows that beyond a certain difficulty threshold, the reward may not be enough to motivate customers, indicating that high difficulty levels deter completions even if the reward size increases.
+
+
+##### Interaction Insight: How does completion rate vary with difficulty? - Sized by Reward.
+
+BOGO offers show a clear decline in completion rates as difficulty increases. Discount offers, on the other hand, maintain higher completion rates despite the increasing difficulty. However, at difficulty level 20, the completion rate drops below 60%, even though the reward increases (reward value = 5). 
 
 
 **6. How does YoY growth in new customers vary by segment?**
@@ -334,17 +350,17 @@ Python, Power BI
 
 ## Data Credibility
 
-**1. Reliable:**  The dataset shows **signs of inaccuracies** and **incompleteness**, with potential bias issues that cannot be fully assessed.
+**1. Reliable:**  The dataset shows **signs of inaccuracies** and **incompleteness**, with potential bias issues that could impact the overall analysis.
 
-The **age** distribution of customers ranges from **18 to 118**. Notably, **all rows with an age of 118 have null values in the 'gender' and 'income' columns**. Additionally, there are 253 rows corresponding to customers aged 90-101, with 17 of them between 100-101. Unlike the 118-year-old entries, **the 90-101 age group has no missing values in other columns**, suggesting they may not be typos. However, **it is worth noting that customers over 100 purchasing coffee might be unrealistic and could indicate potential data quality concerns.** I removed only the rows where the age was 118.
+- **Age Distribution Bias:** The age distribution of customers is skewed, with older segments (Late Career + Retirement) making up over 60% of the sample, while younger segments (Young Adults + Early Career) account for only 16%. This suggests a sampling bias, as the dataset might overrepresent older customers, potentially leading to inaccurate conclusions about customer behavior across different age groups.
 
-The dataset **lacks transaction amount data for BOGO (Buy One Get One) and Discount offer types**, which limits the ability to assess the financial success of these offers. As a result:
+- **Unrealistic Age Entries:** The dataset includes entries for customers aged 90-118, with missing data for customers aged 118 and some potential outliers aged 100-101. While these may not be typos, the unrealistically high age of customers (e.g., purchasing coffee at such ages) raises data quality concerns.
 
-- **Inability to Measure Offer Success Based on Revenue:** The lack of transaction data means we cannot evaluate the success of these offers in terms of revenue generation. Only offer engagement metrics are available.
+- **Missing Transaction Data for Offer Types:** The dataset lacks transaction amount data for BOGO and Discount offer types, which limits the ability to assess the financial success of these offers.
 
-- **Limited Insights into Channel Performance:** Since transactional data is missing, we cannot fully assess which channels are most successful in driving revenue.
+- **Inability to Measure Offer Success by Revenue:** With no transaction data, we cannot evaluate offer success based on revenue generation. We can only analyze engagement metrics like offer views, completions, and redemptions.
 
-- **Focus on Engagement Rather than Financial Impact:** Any performance analysis must focus on engagement metrics such as offer views, completions, and redemption rates, rather than financial success.
+- **Limited Channel Performance Insights:** Without transactional data, assessing which channels drive revenue is impossible, meaning the analysis must focus solely on engagement metrics rather than financial impact.
 
 **2. Original:** The data was downloaded from Maven Analytics but was originally sourced from Kaggle, via Udacity.
 
