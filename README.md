@@ -269,11 +269,11 @@ Answer:
 
 - **Discount** offers maintain higher completion rates even at higher difficulty levels. *+At difficulty level 20**, the **reward size increases** (reward value = 5), but the **completion rate drops** significantly (below 60%). This shows that beyond a certain difficulty threshold, the reward may not be enough to motivate customers, indicating that high difficulty levels deter completions even if the reward size increases.
 
-
+***
 ##### Interaction Insight: How does completion rate vary with difficulty? - Sized by Reward.
 
 BOGO offers show a clear decline in completion rates as difficulty increases. Discount offers, on the other hand, maintain higher completion rates despite the increasing difficulty. However, at difficulty level 20, the completion rate drops below 60%, even though the reward increases (reward value = 5). 
-
+***
 
 **6. How does YoY growth in new customers vary by segment?**
 
@@ -333,14 +333,64 @@ The final page focuses on analyzing transactions across different years, segment
 
 Goal: To analyze the trends in transactions over the years, Quarters, Months, Week number.
 
+Answer:
+##### Interaction Insight: Transactions Trending 
+
+Coffee sales follow an upward trajectory from 2013 to 2018, with a sharp increase observed between August and December overall. 
+
 
 **2. Does Sending More Offers Drive Higher Transactions?**
 
 Goal: To investigate the relationship between the number of offers sent and the resulting transaction volume.
 
+Answer:
+
+- **Highest Transactions:** 
+   The highest total transactions occur in the **16-20** and **21-30** offer ranges, indicating that sending a moderate number of offers tends to result in more transactions.
+
+- **Lower Offers = Lower Transactions:** 
+   For the **2-5** and **6-10** offer ranges, both total offers and transactions are relatively low, suggesting that sending very few offers is not very effective in driving transactions.
+
+- **Diminishing Returns:** 
+   The **31-40** and **41-46** offer ranges show a decline in total transactions despite a higher number of offers, indicating that sending too many offers might not lead to higher conversions and could reflect diminishing returns.
+
+
+##### Interaction Insight: Does Sending More Offers Drive Higher Transactions?
+
+The data suggests that there’s an **optimal range** (between **16 and 30 offers**) where the highest number of transactions occur. Sending too few or too many offers appears less effective.
+
+
 **3. Which segment drives the Transactions?**
 
 Goal: To analyzing which customer segment are driving the highest number of transactions.
+
+Answer:
+
+•	**By Income:**
+
+41% of the total transactions occur by the Middle income level, followed by the uper middle which avounts 32.2% of the total. 
+
+•	**By Age Group:**
+
+Late Career accounts for 37.7% of total transactions, followed by Retirement Age at 29.4%, Mid Career at 21.2%, Early Career at 6.8%, and Young Adults at 4.9%.
+
+However, it's important to note that age representation is biased since older segments make up a larger portion of the sample:
+
+- Older segments (Late Career + Retirement Age) – 61.6% 
+- Younger segments (Early Career + Young Adults) – 16% 
+- Mid Career – 22.4%
+
+This suggests that the higher transaction share among older groups could be influenced by the sample's age imbalance.
+
+
+-----------------------------------------------------------------------------------------------
+
+
+
+- **Mid Career** ($366,954) and **Late Career** ($654,016) **age groups** contribute the most to overall transactions, with Middle and Upper-Middle income levels driving most of this activity.
+- **The High income level** shows lower overall transaction volumes, suggesting that higher-income customers may engage less frequently in transactions or that fewer customers fall into this category.
+- **Young Adults and Early Career individuals** are only represented in the Low and Middle income brackets, reflecting their earlier career stage and lower earning capacity.
+
 
 
 ## Tools Used 
