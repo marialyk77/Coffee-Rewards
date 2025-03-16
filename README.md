@@ -6,6 +6,27 @@
 
 📊 The dataset consists of three CSV files: **Customers**, **Offers**, and **Events**.
 
+## Summary of Key insights 
+
+
+**A. Offer Performance:**
+
+- BOGO offers attract the highest views (81.3%) but have a lower completion rate (57%). In contrast, Discount offers have a higher completion rate (64.5%) but fewer views (69.2%).
+- Middle-income and middle-aged customers show the highest view rates, while high-income and retirement-age customers exhibit the highest completion rates, suggesting that life stage influences engagement while financial power drives conversions.
+
+**B. Customer Behavior:**
+
+- The age distribution is skewed, with older segments (Late Career + Retirement) making up 61.6% of the sample, influencing overall engagement patterns. Younger segments (Early Career + Young Adults) represent just 16%.
+- Older customers (Late Career & Retirement) drive higher completion rates across most channels, which may be due to their larger representation in the sample.
+- Year-over-Year (YoY) Growth in Customers: Growth varies significantly by segment, with High-income and Retirement-age groups showing volatile patterns, while Middle-income and Young Adults display more stable growth trends.
+
+**C. Transactions:**
+
+- Middle-income and Late Career segments drive the highest transaction volumes, reflecting their stronger engagement and purchasing behavior.
+- An optimal range of 16-30 offers is associated with higher transactions, suggesting diminishing returns from sending too few or too many offers.
+
+Overall, life stage, financial power, and offer type significantly impact customer engagement, with older customers showing higher completion rates and middle-income groups displaying strong initial interest. However, the age distribution imbalance in the dataset must be considered when analyzing customer behavior and growth trends.
+
 
 ## Questions 
 
@@ -78,6 +99,9 @@ Answer:
 The alignment between higher view rates in **middle-income and middle-aged segments** suggests that life stage might drive greater interest and responsiveness to offers.
 
 While middle-income customers have the highest view rates, higher-income customers show less engagement (62.2%), indicating that greater purchasing power does not necessarily translate to higher interest in offers. This suggests that life stage rather than income may be a stronger factor influencing customer engagement patterns.
+
+> [!IMPORTANT]
+> Note on Age Distribution: It's important to note that the age distribution in the dataset is skewed, with older segments (Late Career + Retirement) making up a larger portion of the sample. This could impact the results and potentially overrepresent the behavior of older customers when analyzing age-related trends.
 ***
 
 
@@ -101,6 +125,9 @@ The **highest completion** rates are seen in **high-income customers** (77.6%), 
 
 In terms of age, the highest completion rates are observed among retirement-age customers (64.8%), followed closely by late-career customers (64.7%). This may reflect greater brand loyalty, established habits, or a preference for value among older customers.
 
+> [!IMPORTANT]
+> Note on Age Distribution: It's important to note that the age distribution in the dataset is skewed, with older segments (Late Career + Retirement) making up a larger portion of the sample. This could impact the results and potentially overrepresent the behavior of older customers when analyzing age-related trends.
+
 ***
 
 
@@ -113,6 +140,10 @@ In terms of age, the highest completion rates are observed among retirement-age 
 **High-income and retirement-age** customers, however, **have the highest completion rates**, suggesting that while they may engage less frequently, they are more likely to convert when they do engage.
 
 **This indicates that life stage influences initial interest (viewing), but financial power and loyalty are stronger drivers of conversion (completion).**
+
+
+> [!IMPORTANT]
+> Note on Age Distribution: It's important to note that the age distribution in the dataset is skewed, with older segments (Late Career + Retirement) making up a larger portion of the sample. This could impact the results and potentially overrepresent the behavior of older customers when analyzing age-related trends.
 ***
 
 
@@ -150,6 +181,9 @@ Answer:
 
 This analysis highlights the impact of age and income on completion behavior, with younger adults showing more variability and higher-income groups completing tasks faster.
 
+> [!IMPORTANT]
+> Note on Age Distribution: It's important to note that the age distribution in the dataset is skewed, with older segments (Late Career + Retirement) making up a larger portion of the sample. This could impact the results and potentially overrepresent the behavior of older customers when analyzing age-related trends.
+
 
 **2. Do customers complete offers without viewing them? - By Age group & Income level.**
 
@@ -178,6 +212,10 @@ Answer:
 ##### Interaction Insight: Do customers complete offers without viewing them? - By Age group & Income level.
 
 Across both age and income segments, **most customers still complete offers after viewing them** — reinforcing the **importance of the offer’s content and presentation in driving conversions**. **However, the tendency to complete without viewing is more pronounced among older and higher-income customers, likely due to greater brand familiarity and financial confidence.**
+
+> [!IMPORTANT]
+> Note on Age Distribution: It's important to note that the age distribution in the dataset is skewed, with older segments (Late Career + Retirement) making up a larger portion of the sample. This could impact the results and potentially overrepresent the behavior of older customers when analyzing age-related trends.
+
 ***
 
 
@@ -224,21 +262,18 @@ By Income Level:
 - **Mobile performs well across all income segments, but completion rates are highest among high-income customers (61.0%)**, indicating that mobile platforms provide a convenient and effective channel for engaging higher-income customers.
 
 
-**Points to Investigate:**
-
-- **Sampling Bias:** The unusually high completion rates among older customers on mobile and social media suggest that there may be a sampling imbalance — it’s possible that the dataset includes a disproportionate number of older, digitally proficient customers. **This prompts me to check the proportion of younger vs. older customers to clarify this pattern.**
-
--  **Platform-Specific Behavior:** The higher social media completion rates among older customers could indicate that the offers were promoted on platforms more popular among older demographics (e.g., Facebook vs. Snapchat). Understanding where the offers were promoted might explain the skewed engagement pattern.
+> [!IMPORTANT]
+> Note on Age Distribution: It's important to note that the age distribution in the dataset is skewed, with older segments (Late Career + Retirement) making up a larger portion of the sample. This could impact the results and potentially overrepresent the behavior of older customers when analyzing age-related trends.
 
 
-**Checking for sampling bias over older people** 
+**Checking for Age Distribution** 
 
 
 ![image](https://github.com/user-attachments/assets/8e8caab4-4896-4d3a-87eb-4c6fe834bf82)
 
 
 
-**Age Sample Distribution:**
+**Age Distribution:**
 
 - Young Adults: 6.8%
 - Early Career: 9.2%
@@ -246,7 +281,22 @@ By Income Level:
 - Late Career: 34.7%
 - Retirement: 26.9%
 
-This distribution shows that **younger segments (Young Adults + Early Career) make up only 16% of the sample**, **while older segments (Late Career + Retirement) account for over 60%**. This suggests a potential **sampling bias, as the dataset might overrepresent older customers compared to the general population.**
+The sample exhibits a significant age imbalance, with older segments (Late Career + Retirement Age) constituting a much larger portion of the dataset compared to younger segments:
+
+- **Older segments (Late Career + Retirement Age): 61.6%**
+- **Younger segments (Early Career + Young Adults): 16%**
+- **Mid Career: 22.4%**
+  
+The higher completion rates for older customers on channels like web, mobile, and social media may be partly due to the **overrepresentation of older segments in the dataset**. Since older groups (Late Career and Retirement Age) make up a larger portion of the data, their behaviors disproportionately influence the results. This suggests that older customers might be more engaged with these channels, but it’s important to consider that their larger share in the sample skews the results. If younger segments were better represented, the differences in engagement between age groups might not be as pronounced.
+
+**This imbalance may be explained by a real decline in young customer acquisition between 2013 and 2014 (-130.11%).** Following this, the Young Adults segment continued to drop by -27.86% between 2014 and 2015, further worsening the imbalance. However, there was a partial recovery in 2015-2016 (+133.33%), which didn’t fully restore a balanced distribution.
+
+![image](https://github.com/user-attachments/assets/ea50fd55-4275-463e-abdf-ca9fdac6b9f3)
+
+
+**This distribution reflects the natural behavior of the customer segments and should be taken into consideration when analyzing the results, as it may lead to older segments representing a higher proportion of transactions or channel usage.**
+
+
 
 ***
 
@@ -315,6 +365,12 @@ Goal: To analyze the year-over-year (YoY) growth of new customers and its variat
 - **Retirement and Upper-Middle income segments** show the strongest initial growth but tend to experience steeper declines later, suggesting retention challenges.
 - **Young Adults and Low-income groups** are more inconsistent but capable of strong recoveries, suggesting that targeted strategies might work to stabilize their engagement.
 - **Middle income and Mid Career segments** show more consistent patterns in their growth or decline, compared to the more volatile behavior seen in other income and age groups.
+
+
+
+
+> [!IMPORTANT]
+> Note on Age Distribution: It's important to note that the age distribution in the dataset is skewed, with older segments (Late Career + Retirement) making up a larger portion of the sample. When interpreting growth patterns in smaller age groups, we must consider the sample size, as smaller segments can distort the overall growth trend. Since younger groups represent a smaller share of the total sample, their growth rates can appear more exaggerated due to the smaller sample size. This should be kept in mind when analyzing aggregated data, as it could skew the results.
 ***
 
 
@@ -374,13 +430,13 @@ Answer:
 
 Late Career accounts for 37.7% of total transactions, followed by Retirement Age at 29.4%, Mid Career at 21.2%, Early Career at 6.8%, and Young Adults at 4.9%.
 
-However, it's important to note that age representation is biased since older segments make up a larger portion of the sample:
+However, it's important to note that age representation is not equal among groups since older segments make up a larger portion of the sample:
 
 - Older segments (Late Career + Retirement Age) – 61.6% 
 - Younger segments (Early Career + Young Adults) – 16% 
 - Mid Career – 22.4%
 
-This suggests that the higher transaction share among older groups could be influenced by the sample's age imbalance.
+This distribution reflects the typical behavior and trends in customer acquisition across different age groups, such as the decline in young customer acquisition over the years.
 
 
 
@@ -401,7 +457,7 @@ Python, Power BI
 
 **1. Reliable:**  The dataset shows **signs of inaccuracies** and **incompleteness**, with potential bias issues that could impact the overall analysis.
 
-- **Age Distribution Bias:** The age distribution of customers is skewed, with older segments (Late Career + Retirement) making up over 60% of the sample, while younger segments (Young Adults + Early Career) account for only 16%. This suggests a sampling bias, as the dataset might overrepresent older customers, potentially leading to inaccurate conclusions about customer behavior across different age groups.
+- **Age Distribution Imbalance:** The age distribution of customers is skewed, with older segments (Late Career + Retirement) making up over 60% of the sample, while younger segments (Young Adults + Early Career) account for only 16%. This uneven representation of age groups could influence the results and lead to inaccurate conclusions about customer behavior across different age groups.
 
 - **Unrealistic Age Entries:** The dataset includes entries for customers aged 90-118, with missing data for customers aged 118 and some potential outliers aged 100-101. While these may not be typos, the unrealistically high age of customers (e.g., purchasing coffee at such ages) raises data quality concerns.
 
